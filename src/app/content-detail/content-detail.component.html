@@ -1,0 +1,17 @@
+<button mat-raised-button color="primary" routerLink="/content">Go Back</button>
+<br>
+<span class="whole">
+  <div class="id">
+  {{content.id}}
+</div>
+<img src= "{{content.imageUrl || 'https://www.templetonpress.org/sites/default/files/default_images/default_book_cover.jpg'}}">
+<div class="listitem">
+  <div><strong>Body:</strong> {{content.body}}</div>
+  <div><strong>Author:</strong> {{content.author}}</div>
+  <div><strong>Title:</strong> {{content.title}}</div>
+  <div class="type">
+    <strong>Type:</strong> {{ content.type }}
+  </div>
+  <div><strong>Tags:</strong> {{content.tags.join(', ')}}</div>
+</div>
+</span>

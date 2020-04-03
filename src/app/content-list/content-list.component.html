@@ -1,0 +1,14 @@
+<app-create-content class="center" (newBookEvent)="addBookToList($event)" (updateBookEvent)="updateBookToList($event)"> </app-create-content>
+<br/>
+<mat-form-field>
+<p>
+  <input matInput [(ngModel)]="twoWayBinding" (ngModelChange)="findBookLive(twoWayBinding)" placeholder="Please enter a book name"><br>
+</p>
+</mat-form-field>
+<p class="result" *ngIf="bookFoundLive">
+  <strong>Result:</strong><br>
+  {{ bookFoundLive }}
+</p>
+<br/>
+<app-content-card *ngFor="let item of content; last as isLast;" (deleteBookEvent)="deleteBookFromList($event)" [content]="item" [class.is-last]="isLast">
+</app-content-card>

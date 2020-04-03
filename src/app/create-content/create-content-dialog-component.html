@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Add New Content!</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="" [(ngModel)]="data.newBookItem.title">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Author</mat-label>
+    <input matInput placeholder="" [(ngModel)]="data.newBookItem.author">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Body</mat-label>
+    <input matInput placeholder="" [(ngModel)]="data.newBookItem.body">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Type</mat-label>
+    <input matInput placeholder="" [(ngModel)]="data.newBookItem.type">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Image Url</mat-label>
+    <input matInput placeholder="" [(ngModel)]="data.newBookItem.imageUrl">
+  </mat-form-field>
+<!--  <mat-form-field>-->
+<!--    <mat-label>Tag</mat-label>-->
+<!--    <input matInput placeholder="" [(ngModel)]="data.newBookItem.tags">-->
+<!--  </mat-form-field>-->
+</div>
+<div mat-dialog-actions>
+  <button mat-button type="button" (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.newBookItem" cdkFocusInitial>Add New Item!</button>
+</div>

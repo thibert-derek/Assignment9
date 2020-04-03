@@ -1,0 +1,9 @@
+<h1>Welcome to <span [innerHTML]="title | safe"></span></h1>
+<br />
+<a routerLink="content">Content List</a><br>
+<a routerLink="content/42">The answer to the universe and everything</a><br>
+<a routerLink="thiswillnotwork">Invalid page link</a><br>
+<br>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+<br />
